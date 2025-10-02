@@ -25,6 +25,29 @@ export default function App() {
   const intervalRef = useRef(null);
   const audioContextRef = useRef(null);
 
+  // Update favicon dynamically based on timer state
+  useEffect(() => {
+    const updateFavicon = () => {
+      const favicon = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      favicon.type = 'image/svg+xml';
+      favicon.rel = 'icon';
+      
+      if (isStudying && !isStudyPaused) {
+        favicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>";
+      } else if (isBreak && !isBreakPaused) {
+        favicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>";
+      } else if (isStudyPaused) {
+        favicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏸️</text></svg>";
+      } else {
+        favicon.href = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>";
+      }
+      
+      document.head.appendChild(favicon);
+    };
+
+    updateFavicon();
+  }, [isStudying, isStudyPaused, isBreak, isBreakPaused]);
+
   // Calculate dynamic examples based on current ratio
   const getDynamicExamples = () => {
     const example1 = studyRatio * 2; // e.g., 4:1 → 8 minutes
@@ -626,7 +649,7 @@ export default function App() {
 
       {/* Footer - UPDATED */}
       <div className={`py-6 text-center ${mutedText} text-xs flex-shrink-0`}>
-        Made with ❤️ For everyone chasing their dreams
+        Made with ❤️ in India by Ashin Vincent
       </div>
     </div>
   );
