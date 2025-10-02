@@ -7,6 +7,199 @@ const STORAGE = {
   SETTINGS: 'ratiotimer-settings'
 };
 
+// Privacy Policy Component
+const PrivacyPolicy = ({ onBack, isDark, textColor, mutedText, cardBg, borderColor, primaryBtn }) => (
+  <div className="space-y-6">
+    <button
+      onClick={onBack}
+      className={`p-2 rounded-lg transition-colors ${isDark ? 'hover:bg-zinc-800' : 'hover:bg-zinc-100'} mb-4`}
+      title="Back to Timer"
+    >
+      <ArrowLeft className="w-4 h-4" />
+    </button>
+    
+    <div className={`${cardBg} rounded-2xl p-6 md:p-8 border ${borderColor}`}>
+      <h1 className="text-2xl font-bold mb-4">Privacy Policy</h1>
+      <p className={`text-sm ${mutedText} mb-6`}>Last updated: October 02, 2025</p>
+      
+      <div className={`prose prose-sm max-w-none ${textColor}`}>
+        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+        
+        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Interpretation and Definitions</h2>
+        
+        <h3 className="font-semibold mt-4 mb-2">Interpretation</h3>
+        <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+        <h3 className="font-semibold mt-4 mb-2">Definitions</h3>
+        <p>For the purposes of this Privacy Policy:</p>
+        <ul className="list-disc list-inside space-y-1 mt-2">
+          <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+          <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to RatioTimer.</li>
+          <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website.</li>
+          <li><strong>Country</strong> refers to: Kerala, India</li>
+          <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+          <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+          <li><strong>Service</strong> refers to the Website.</li>
+          <li><strong>Website</strong> refers to RatioTimer, accessible from <a href="https://ratiotimer.vercel.app/" className="underline">https://ratiotimer.vercel.app/</a></li>
+          <li><strong>You</strong> means the individual accessing or using the Service.</li>
+        </ul>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Collecting and Using Your Personal Data</h2>
+        
+        <h3 className="font-semibold mt-4 mb-2">Types of Data Collected</h3>
+        
+        <h4 className="font-medium mt-3 mb-2">Personal Data</h4>
+        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+        <ul className="list-disc list-inside mt-2">
+          <li>Usage Data</li>
+        </ul>
+
+        <h4 className="font-medium mt-3 mb-2">Usage Data</h4>
+        <p>Usage Data is collected automatically when using the Service.</p>
+        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Use of Your Personal Data</h2>
+        <p>The Company may use Personal Data for the following purposes:</p>
+        <ul className="list-disc list-inside space-y-1 mt-2">
+          <li>To provide and maintain our Service</li>
+          <li>To manage Your requests</li>
+          <li>For business transfers</li>
+          <li>For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, and improving our Service.</li>
+        </ul>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Security of Your Personal Data</h2>
+        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially reasonable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Children's Privacy</h2>
+        <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Links to Other Websites</h2>
+        <p>Our Service may contain links to other websites that are not operated by Us. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Changes to this Privacy Policy</h2>
+        <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+        <ul className="list-disc list-inside mt-2">
+          <li>By email: ratiotimer.help@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+);
+
+// Terms of Service Component
+const TermsOfService = ({ onBack, isDark, textColor, mutedText, cardBg, borderColor, primaryBtn }) => (
+  <div className="space-y-6">
+    <button
+      onClick={onBack}
+      className={`p-2 rounded-lg transition-colors ${isDark ? 'hover:bg-zinc-800' : 'hover:bg-zinc-100'} mb-4`}
+      title="Back to Timer"
+    >
+      <ArrowLeft className="w-4 h-4" />
+    </button>
+    
+    <div className={`${cardBg} rounded-2xl p-6 md:p-8 border ${borderColor}`}>
+      <h1 className="text-2xl font-bold mb-4">Terms and Conditions</h1>
+      <p className={`text-sm ${mutedText} mb-6`}>Last updated: October 02, 2025</p>
+      
+      <div className={`prose prose-sm max-w-none ${textColor}`}>
+        <p>Please read these terms and conditions carefully before using Our Service.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Interpretation and Definitions</h2>
+        
+        <h3 className="font-semibold mt-4 mb-2">Interpretation</h3>
+        <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+
+        <h3 className="font-semibold mt-4 mb-2">Definitions</h3>
+        <p>For the purposes of these Terms and Conditions:</p>
+        <ul className="list-disc list-inside space-y-1 mt-2">
+          <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to RatioTimer.</li>
+          <li><strong>Country</strong> refers to: Kerala, India</li>
+          <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+          <li><strong>Service</strong> refers to the Website.</li>
+          <li><strong>Website</strong> refers to RatioTimer, accessible from <a href="https://ratiotimer.vercel.app/" className="underline">https://ratiotimer.vercel.app/</a></li>
+          <li><strong>You</strong> means the individual accessing or using the Service.</li>
+        </ul>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Acknowledgment</h2>
+        <p>These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
+        <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
+        <p>By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
+        <p>You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Links to Other Websites</h2>
+        <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.</p>
+        <p>The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Termination</h2>
+        <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Limitation of Liability</h2>
+        <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+        <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Governing Law</h2>
+        <p>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Disputes Resolution</h2>
+        <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Changes to These Terms and Conditions</h2>
+        <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.</p>
+
+        <h2 className="text-lg font-semibold mt-6 mb-3">Contact Us</h2>
+        <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+        <ul className="list-disc list-inside mt-2">
+          <li>By email: ratiotimer.help@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+);
+
+// Contact Component
+const Contact = ({ onBack, isDark, textColor, mutedText, cardBg, borderColor, primaryBtn }) => (
+  <div className="space-y-6">
+    <button
+      onClick={onBack}
+      className={`p-2 rounded-lg transition-colors ${isDark ? 'hover:bg-zinc-800' : 'hover:bg-zinc-100'} mb-4`}
+      title="Back to Timer"
+    >
+      <ArrowLeft className="w-4 h-4" />
+    </button>
+    
+    <div className={`${cardBg} rounded-2xl p-6 md:p-8 border ${borderColor} text-center`}>
+      <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+      
+      <div className="max-w-md mx-auto space-y-6">
+        <p className={`text-lg ${mutedText}`}>
+          Have questions or feedback? We'd love to hear from you.
+        </p>
+        
+        <div className={`p-6 rounded-xl ${isDark ? 'bg-zinc-800' : 'bg-zinc-100'} border ${borderColor}`}>
+          <div className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-2">Email us at</div>
+          <a 
+            href="mailto:ratiotimer.help@gmail.com"
+            className="text-xl font-semibold hover:underline break-all"
+          >
+            ratiotimer.help@gmail.com
+          </a>
+        </div>
+        
+        <p className={`text-sm ${mutedText}`}>
+          We typically respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
 export default function App() {
   const [isStudying, setIsStudying] = useState(false);
   const [isStudyPaused, setIsStudyPaused] = useState(false);
@@ -298,7 +491,6 @@ export default function App() {
       {/* Header */}
       <div className={`${cardBg} border-b ${borderColor} flex-shrink-0`}>
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* CHANGED: Updated name to RatioTimer */}
           <div 
             onClick={() => setView('timer')}
             className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
@@ -565,7 +757,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        ) : (
+        ) : view === 'stats' ? (
           /* Stats View */
           <div className="space-y-6">
             <div className={`${cardBg} rounded-2xl p-6 md:p-8 border ${borderColor}`}>
@@ -644,12 +836,72 @@ export default function App() {
               )}
             </div>
           </div>
-        )}
+        ) : view === 'privacy' ? (
+          <PrivacyPolicy 
+            onBack={() => setView('timer')}
+            isDark={isDark}
+            textColor={textColor}
+            mutedText={mutedText}
+            cardBg={cardBg}
+            borderColor={borderColor}
+            primaryBtn={primaryBtn}
+          />
+        ) : view === 'terms' ? (
+          <TermsOfService 
+            onBack={() => setView('timer')}
+            isDark={isDark}
+            textColor={textColor}
+            mutedText={mutedText}
+            cardBg={cardBg}
+            borderColor={borderColor}
+            primaryBtn={primaryBtn}
+          />
+        ) : view === 'contact' ? (
+          <Contact 
+            onBack={() => setView('timer')}
+            isDark={isDark}
+            textColor={textColor}
+            mutedText={mutedText}
+            cardBg={cardBg}
+            borderColor={borderColor}
+            primaryBtn={primaryBtn}
+          />
+        ) : null}
       </div>
 
       {/* Footer - UPDATED */}
-      <div className={`py-6 text-center ${mutedText} text-xs flex-shrink-0`}>
-        Made with ❤️ in India by Ashin Vincent
+      <div className={`py-6 flex-shrink-0 ${mutedText} text-xs`}>
+        <div className="max-w-4xl mx-auto px-4">
+          {/* Links row */}
+          <div className="flex justify-center space-x-6 mb-3">
+            <button
+              onClick={() => setView('privacy')}
+              className="hover:underline transition-colors"
+            >
+              Privacy Policy
+            </button>
+            <button
+              onClick={() => setView('terms')}
+              className="hover:underline transition-colors"
+            >
+              Terms of Service
+            </button>
+            <button
+              onClick={() => setView('contact')}
+              className="hover:underline transition-colors"
+            >
+              Contact
+            </button>
+          </div>
+          
+          {/* Separator line */}
+          <div className={`w-24 h-px ${isDark ? 'bg-zinc-700' : 'bg-zinc-300'} mx-auto mb-3`}></div>
+          
+          {/* Made with love text - CENTERED */}
+          <div className="text-center">
+            Made with ❤️ for everyone chasing their dreams
+          </div>
+        </div>
       </div>
     </div>
   );
