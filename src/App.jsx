@@ -218,6 +218,11 @@ export default function App() {
   const intervalRef = useRef(null);
   const audioContextRef = useRef(null);
 
+  // Scroll to top when view changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]);
+
   // Update favicon dynamically based on timer state
   useEffect(() => {
     const updateFavicon = () => {
